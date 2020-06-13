@@ -1,0 +1,114 @@
+@import url("/assets/fonts.css");
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+}
+
+body {
+  background: #000000;
+  color: #fff;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-family: Mont, sans-serif;
+  font-size: 1em;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div#main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+div.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  max-width: 400px;
+  text-align: center;
+}
+div.content div.avatar,
+div.content div.avatar img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 75px;
+  align-self: center;
+}
+div.content div.avatar {
+  position: relative;
+}
+div.content div.avatar::before {
+  position: absolute;
+  content: " ";
+  background-color: #ffffff;
+  background-image: url("/assets/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  right: 8px;
+  bottom: 8px;
+}
+div.content span {
+  margin-top: 16px;
+  font-weight: bold;
+}
+div.links {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 32px;
+}
+a.link {
+  font-weight: 800;
+  color: #ffffff;
+  border: 3px solid #fff;
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+a.link::after {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  position: absolute;
+  right: -14px;
+  top: 14px;
+  transition: 0.4s all;
+  transform: rotate(0deg);
+}
+a.link:hover {
+  color: #000;
+  background-color: #fff;
+}
+a.link:hover::after {
+  right: 14px;
+  background-color: #000;
+  transform: rotate(90deg);
+  transition: 0.4s all;
+}
+div.links > .link:last-child {
+  margin-bottom: 0;
+}
