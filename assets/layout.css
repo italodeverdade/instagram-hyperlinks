@@ -53,7 +53,7 @@ div.content div.avatar::before {
   position: absolute;
   content: " ";
   background-color: #ffffff;
-  background-image: url("./assets/check.svg");
+  background-image: url("./check.svg");
   background-repeat: no-repeat;
   background-position: center center;
   width: 32px;
